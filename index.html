@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Three.js</title>
 	<style type="text/css">
-		html, body {margin: 0; padding: 0; overflow: hidden}
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden
+		}
 	</style>
 </head>
+
 <body>
 	<div id="webgl"></div>
 	<div id="info">Description
@@ -15,6 +22,7 @@
 		</div>
 
 	</div>
+	<div> <button id="stopAnim" onclick="stopAnim()">Stop</button></div>
 
 	<script src="lib/stats.js"></script>
 	<script src="lib/Tween.min.js"></script>
@@ -24,8 +32,16 @@
 	<!-- <script src="lib/OBJLoader.js"></script> -->
 	<script src="lib/OrbitControls.js"></script>
 	<script src="main.js" type="module"></script>
+	<script src="World/components/animAux.js" type="module"></script>
 	<script src="orbitFunctions.js" type="module"></script>
+	<script>
+		function stopAnim(){
+	console.log(document.getElementsByName("world", true))
+
+		// document.getElementsByName("world").start();
+		}</script>
 
 	<link rel="stylesheet" href="./style.css">
 </body>
+
 </html>

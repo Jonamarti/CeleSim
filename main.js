@@ -1,25 +1,31 @@
 import { World } from './World/World.js';
-import { stopAnim } from './World/components/animAux.js';
+// import { stopAnim } from './World/components/animAux.js';
 
 const loader = new THREE.FileLoader();
 var bodiesData;
 
-// // planet data load
-// import { bodyData } from '/bodiesData.json';
-
 function main() {
 
+  // Get a reference to the container element
+  const container = document.getElementById('webgl');
 
-  //load a text file and output the result to the console
+  //load the data and start the loop when loaded
   loader.load(
     // resource URL
     'bodiesData.json',
 
-    // onLoad callback
+    // onLoad callback. Will trigger when file is loaded
     function (data) {
-      // output the text to the console
-      bodiesData = data; 
-      console.log(JSON.parse(data))
+
+      // parse raw data to object format
+      bodiesData = JSON.parse(data);
+
+      // create a new world
+      const world = new World(container, bodiesData);
+      world.name = "world";
+
+      // start the animation loop
+      world.start();
     },
 
     // onProgress callback
@@ -32,23 +38,6 @@ function main() {
     //   console.error('An error happened loading info '+err);
     // }
   );
-
-
-  // const bodyData = await THREE.loadAsync('bodiesData.json');
-
-  // console.log(bodyData);
-
-  // Get a reference to the container element
-  const container = document.getElementById('webgl');
-
-  // create a new world
-  const world = new World(container);
-  world.name = "world";
-
-  // start the animation loop
-  world.start();
-
-  // stopAnim();
 
 }
 

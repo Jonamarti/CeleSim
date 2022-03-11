@@ -3,7 +3,7 @@ function createPlanet(radius, xpos = 0, ypos = 0, zpos = 0) {
 
 
 	const geometry = new THREE.SphereGeometry(radius, 24, 24);
-	const material = new THREE.MeshBasicMaterial({ color: 'purple' });
+	const material = new THREE.MeshBasicMaterial();
 	const planet = new THREE.Mesh(geometry, material);
 
 	

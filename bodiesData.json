@@ -3,7 +3,7 @@
 
 		"stars":{
 			"sun":{
-				"mass":"1.9885e30kg",
+				"mass":"1.9885e30",
 				"radius":"6.96342e8"				
 			}
 		},
@@ -15,7 +15,7 @@
 				"orbitSemimajorRadius": "0.387",
 				"initSpeed": "1",
 				"orbitPeriod": "0.24",
-				"rotationPeriod": "2",
+				"rotationPeriod": "58.6",
 				"eccentricity":"0.206"
 			},
 			"venus": {
@@ -24,38 +24,42 @@
 				"orbitSemimajorRadius": "0.723",
 				"initSpeed": "0",
 				"orbitPeriod": "0.62",
-				"rotationPeriod": "2",
+				"rotationPeriod": "243",
 				"eccentricity":"0.007"
 			},
 			"earth": {
-				"mass": "5.97237e24kg",
+				"massAbs":"5.98e24",
+				"mass": "1",
 				"radius": "4.26e-5",
 				"orbitSemimajorRadius": "1",
 				"initSpeed": "0",
 				"orbitPeriod": "1",
-				"rotationPeriod": "2",
+				"rotationPeriod": "1",
 				"eccentricity":"0.017"
 			},
 			"mars": {
-				"mass": "3.3011e23kg",
+				
+				"mass": "0.11",
 				"radius": "2.26e-5",
 				"orbitSemimajorRadius": "1.524",
 				"initSpeed": "0",
 				"orbitPeriod": "1.88",
-				"rotationPeriod": "2",
+				"rotationPeriod": "1.025",
 				"eccentricity":"0.093"
 			},
 			"jupiter": {
-				"mass": "3.3011e23kg",
+				"massAbs": "3.3011e23kg",
+				"mass":318,
 				"radius": "0.0001",
 				"orbitSemimajorRadius": "5.203",
 				"initSpeed": "0",
 				"orbitPeriod": "11.86",
-				"rotationPeriod": "2",
+				"rotationPeriod": "1.09",
 				"eccentricity":"0.048"
 			},
 			"saturn": {
-				"mass": "3.3011e23kg",
+				"massAbs": "3.3011e23kg",
+				"mass":95.1,
 				"radius": "0",
 				"orbitSemimajorRadius": "9.539",
 				"initSpeed": "0",
@@ -64,7 +68,8 @@
 				"eccentricity":"0.056"
 			},
 			"uranus": {
-				"mass": "3.3011e23kg",
+				"massAbs": "3.3011e23kg",
+				"mass":14.6,
 				"radius": "0",
 				"orbitSemimajorRadius": "19.182",
 				"initSpeed": "0",
@@ -73,7 +78,8 @@
 				"eccentricity":"0.047"
 			},
 			"neptune": {
-				"mass": "3.3011e23kg",
+				"massAbs": "3.3011e23kg",
+				"mass":17.2,
 				"radius": "0",
 				"orbitSemimajorRadius": "30.058",
 				"initSpeed": "0",
@@ -82,7 +88,8 @@
 				"eccentricity":"0.009"
 			},
 			"pluto": {
-				"mass": "3.3011e23kg",
+				"massAbs": "3.3011e23kg",
+				"mass":0.002,
 				"radius": "0",
 				"orbitSemimajorRadius": "39.439",
 				"initSpeed": "0",

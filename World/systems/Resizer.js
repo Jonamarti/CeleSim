@@ -16,7 +16,7 @@ class Resizer {
       camera.updateProjectionMatrix();
 
       renderer.setSize(window.innerWidth, window.innerHeight);
-      console.log("Resizeee")
+      
        // set the size again if a resize occurs
       setSize(container, camera, renderer);
       this.onResize();
