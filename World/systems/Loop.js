@@ -11,16 +11,16 @@ var sqrtGMprime = 1;
 const clock = new THREE.Clock();
 
 class Loop {
-  constructor(camera, scene, renderer,bodiesData) {
+  constructor(camera, scene, renderer, bodiesData) {
     this.camera = camera;
     this.scene = scene;
     this.renderer = renderer;
     this.updatables = [];
-    this.planetData= bodiesData.bodies.planets;
+    this.planetData = bodiesData.bodies.planets;
   }
 
   start() {
-    
+
 
     // var planetData= bodiesData.bodies.planets;
 
@@ -60,19 +60,20 @@ class Loop {
         // object.rotation.z = elapsedTime * (1 * sqrtGMprime) / (Math.sqrt(a * a * a));
 
         // placeholder equation for x and y, valid for circular only
-        object.position.x = object.orbitRadius*Math.cos(elapsedTime*((1 * sqrtGMprime) / (Math.sqrt(a * a * a))));
-        object.position.y = object.orbitRadius*Math.sin(elapsedTime*((1 * sqrtGMprime) / (Math.sqrt(a * a * a))))
-        // planetMoveData[object.name][x]=object.position.x;
-        // planetMoveData[object.name][y]=object.position.y;
+        object.position.x = object.orbitRadius * Math.cos(elapsedTime * ((1 * sqrtGMprime) / (Math.sqrt(a * a * a))));
+        object.position.y = object.orbitRadius * Math.sin(elapsedTime * ((1 * sqrtGMprime) / (Math.sqrt(a * a * a))))
+        // console.log(this.planetData)
+        this.planetData[object.name].x = object.position.x;
+        this.planetData[object.name].y = object.position.y;
 
 
         // rotation around self axis
-        object.rotation.y = elapsedTime*(Math.PI)*2*50/this.planetData[object.name].rotationPeriod;
-        
+        object.rotation.y = elapsedTime * (Math.PI) * 2 * 50 / this.planetData[object.name].rotationPeriod;
+
         // object.tick(delta,elapsedTime);
       }
     }
-    displayBodiesData(this.planetData,elapsedTime);
+    displayBodiesData(this.planetData, elapsedTime);
 
   }
 }

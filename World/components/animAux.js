@@ -7,14 +7,17 @@ function stopAnim() {
 function displayBodiesData(planetMoveData,elapsedTime) {
 	
 
+	// console.log(planetMoveData)
+	
 	let planetInfo = document.getElementById("planetInfo");
+	planetInfo.innerHTML="";
 
 
 	planetInfo.innerHTML = `Elapsed time: ${elapsedTime.toFixed(3)}`;
 	for (let plan in planetMoveData) {
 
 		planetInfo.innerHTML += `<p>${plan} R=${planetMoveData[plan].orbitSemimajorRadius}
-		x: ${planetMoveData[plan].x}, y: ${planetMoveData[plan].y}</p>`
+		x: ${Number(planetMoveData[plan].x).toFixed(3)} <br> y: ${Number(planetMoveData[plan].y).toFixed(3)}</p>`
 		
 
 	}

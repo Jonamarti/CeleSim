@@ -14,6 +14,7 @@
 </head>
 
 <body>
+	<div class="stopAnimDiv"> <button id="stopAnim" onclick=>Stop</button></div>
 	<div id="webgl"></div>
 	<div id="info">Description
 
@@ -22,7 +23,7 @@
 		</div>
 
 	</div>
-	<div> <button id="stopAnim" onclick="stopAnim()">Stop</button></div>
+
 
 	<script src="lib/stats.js"></script>
 	<script src="lib/Tween.min.js"></script>
@@ -31,15 +32,15 @@
 	<script src="lib/three.min.js"></script>
 	<!-- <script src="lib/OBJLoader.js"></script> -->
 	<script src="lib/OrbitControls.js"></script>
-	<script src="main.js" type="module"></script>
+	<script src="main.js"></script>
 	<script src="World/components/animAux.js" type="module"></script>
 	<script src="orbitFunctions.js" type="module"></script>
-	<script>
-		function stopAnim(){
-	console.log(document.getElementsByName("world", true))
+	<!-- <script>
+		function stopAnim() {
+			console.log(document.getElementsByName("world", true))
 
-		// document.getElementsByName("world").start();
-		}</script>
+			// document.getElementsByName("world").start();
+		}</script> -->
 
 	<link rel="stylesheet" href="./style.css">
 </body>

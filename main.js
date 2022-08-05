@@ -26,6 +26,7 @@ function main() {
 
       // start the animation loop
       world.start();
+
     },
 
     // onProgress callback

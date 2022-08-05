@@ -66,8 +66,6 @@ class World {
 
   start() {
 
-
-
     loop.start();
   }
 
